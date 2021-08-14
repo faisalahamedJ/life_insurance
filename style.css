@@ -1,0 +1,374 @@
+:root{
+    --primary : rgb(168,249,228); 
+    --linearBg : linear-gradient(0deg, rgb(186, 255, 237) 0%, rgba(255,255,255,1) 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: sans-serif;
+    letter-spacing: .1rem;
+}
+
+.header{
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    background: var(--linearBg);
+    position: fixed;
+    box-shadow: 0 .1px 5px #000;
+    display: flex;
+}
+
+
+.logo{
+    
+    width: 20%;
+    height: 100%;
+}
+
+.logo>img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.navbar{
+    width: 70%;
+    
+}
+
+.menu-btn{
+    width: 10%;
+    display: none;
+}
+.menu-btn>img{
+    width: 50px;
+    height: 50px; 
+    position: relative;   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav{
+    margin: .5rem auto 0rem ;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.list_item>a{
+    text-decoration: none;
+    color: black;
+}
+
+.list_item>a:hover{
+    color: blue;
+}
+
+
+
+.case-study-container{
+    margin-top: 5rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.case-study-content{
+    width: 50%;
+    height: auto;
+    padding: 3rem 0 0 5rem;
+    line-height: 2;
+}
+h1{
+    font-size: 2.5rem;
+}
+.btn{
+    margin-top: 1rem;
+    background-color: rgb(2, 65, 255);
+    display: inline-block;
+    padding: .9rem 1.5rem;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.btn:hover{
+    color: rgba(28, 29, 29,.5);
+    background-color: #fff;
+    border: 1px solid #000;
+    transition: .2s ease-out;
+}
+.case-study-image-container{
+    top: 30%;
+    width: 50%;
+    height: 60%;
+    position: relative;
+    background-color: var(--primary);
+    z-index: -999;
+}
+.case-study-image-container>img{
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 60%;
+    height: auto;
+    object-fit: fill;
+    z-index: -3;
+    border-radius: 10px;
+}
+
+.case-study-image-container >p{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 15rem;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    padding: 1.3rem;
+    font-size: 1rem;
+    color: rgb(1, 20, 75);
+    font-weight: 600;   
+
+}
+
+
+@media screen and (max-width : 768px){
+    h1{
+        font-size: 2rem;
+    }
+    
+
+    .navbar{
+        position: absolute;
+        width: 100%;
+        z-index: -999;
+    }
+
+    .nav{
+        margin: 0;
+        padding-top: 2rem;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        background: var(--linearBg);
+        display: none;
+        transition: length 5s;
+        }
+    .list_item{
+        width: 100%;
+        display: block;
+        padding: 2rem;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    .menu-btn{
+        right: 0;
+        position: absolute;
+        padding: 1.5rem;
+        display: block;
+    }
+
+    .case-study-container{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 5rem;
+        width: 100%;
+        height: 100vh;
+    }
+    .case-study-image-container{
+        width: 50%;
+        height: 50vh;
+        position: absolute;
+        top: 25rem;
+        right: 0;
+        
+    }
+    .case-study-image-container > img{
+        width: 150%;
+        height: 100%;
+        top: -13rem;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+    }
+    .case-study-image-container > p{
+        top: -10rem;
+        left: -12rem;
+        position: absolute;
+    }
+    .case-study-content{
+        width: 100%;
+        height: 50vh;
+        padding:1rem;
+        position: relative;
+        top: 0rem;
+        margin-bottom: 2rem;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width : 480px){
+    body{
+        font-size: 14px;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    .case-study-image-container{
+        width: 50%;
+        height: 50vh;
+    }
+    .case-study-image-container > img{
+        width: 150%;
+        height: 100%;
+        top: -20rem;
+        position: absolute;
+    }
+    .case-study-image-container > p{
+        top: -15rem;
+        left: -8rem;
+        position: absolute;
+    }
+    .case-study-content{
+        width: 100%;
+        height: 50vh;
+        position: relative;
+        line-height: 1.5;
+        top: 1rem;
+       
+        margin-bottom: 1rem;
+    }
+
+}
+
+.testimonial-container{
+    padding-top: 3rem;
+    width: 100%;
+    height: 90vh;
+}
+
+
+.showcase-1{
+    text-align: center;
+    line-height: 2;
+}
+
+
+.team-member-container{
+     padding-top: 3rem;
+     display: flex;
+     gap: 2rem;
+     width: 70%;
+     margin: 0 auto;
+     text-align: center;
+     line-height: 1.5;
+
+}
+
+.team-member>p{
+    line-height: 2rem;
+}
+
+.round-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-sub{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(10, 17, 56);
+    color: #fff;
+    text-align: center;
+
+}
+
+h3{
+    color: rgb(49, 49, 49);
+}
+
+
+h5{
+    font-weight: lighter;
+    font-size: .7rem;
+}
+
+.testimonial-sub>h1{
+    padding: 5rem 0 1.5rem 0;
+    font-size: 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.testimonial-sub>.btn{
+    border: 1px solid #fff;
+}
+.testimonial-sub > .btn:hover{
+    background-color: #0000;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px){
+    .testimonial-container{
+        height: auto;
+        padding: 3rem 0;
+    }
+    .team-member-container{
+        gap: 1rem;
+        width: 85%;
+    }
+    .round-img{
+        margin: 2rem auto;
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width : 480px){
+    
+    .testimonial-container{
+        padding: 5rem 0;
+        height: auto;
+    }
+
+    .team-member-container{
+        padding-top: 1rem;
+        flex-direction: column;
+    }
+    .team-member>p{
+        line-height: 1.5rem;
+    }
+
+    .round-img{
+        margin: 1rem auto;
+    }
+
+    .testimonial-sub{
+        height: auto;
+    }
+
+    .testimonial-sub>h1{
+        padding: 2rem 0 1.5rem 0;
+        font-size: 1.5rem;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+}
